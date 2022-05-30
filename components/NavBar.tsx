@@ -1,4 +1,3 @@
-import Image from 'next/image';
 import ConnectWalletButton from './ConnectWalletButton';
 
 export default function NavBar() {

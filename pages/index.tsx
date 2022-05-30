@@ -32,7 +32,6 @@ export const Home = (): JSX.Element => {
       const price = ethers.utils.parseUnits("1.0", 16);
       const signer = await provider.getSigner();
       const contract = new Contract(NFT_CONTRACT_ADDRESS, ArchieNFTAbi, web3Provider.getSigner());
-      const owner = await contract.owner();
       const mintTx = await contract.mint([merkleProof], {from: signer.getAddress( ), value: price});
       await mintTx.wait();
       alert('Success: Minted CCW')
